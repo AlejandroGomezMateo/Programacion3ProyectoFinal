@@ -1,0 +1,41 @@
+@use 'variables';
+@use 'mixins';
+
+
+.modal-navbar{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    &_background{
+        @include mixins.modal-background;
+    }
+    background-image: linear-gradient( rgb(253, 169, 42), rgb(235, 88, 30)) ;
+    width: 250px;
+    height: 100%;
+    padding: 28px 24px;
+    //display: none;
+    .modal_navbar_items{
+        //border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 600px;
+        list-style: none;
+        margin-top: 50PX;
+        font-weight: 700;
+        :hover{
+            cursor: pointer;
+            color: rgb(255, 0, 0);
+        }
+    }
+    .modal_navbar_link{
+        text-decoration: none;
+        color: variables.$Very-dark-blue;
+        font-weight: 700;
+        font-size: 1.1em;
+    }
+    &_close-icon:hover{
+        cursor: pointer;
+        content: url(../images/icon-close2.svg);
+    }
+
+}

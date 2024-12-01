@@ -1,0 +1,30 @@
+@use 'variables';
+
+.navbar{
+   display: none;
+   //border: 1px solid purple;
+   width: 400px;
+   &_items{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    //display: none;
+   }
+
+  &_links{
+    text-decoration: none;
+    color: variables.$Dark-grayish-blue;
+    display: block;
+    height: 112px;
+    padding-top: 42px;
+    font-weight: 700;
+    &:hover{
+        border-bottom: 4px solid variables.$Orange;
+        color: orange;
+    }
+   }
+   @media (min-width: 1115px){
+   display: block;
+}
+
+}
